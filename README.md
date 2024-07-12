@@ -1,34 +1,78 @@
 # PRODIGY_ML_02
 
-# Customer Segmentation using K-Means Clustering
+# Customer Segmentation Using K-Means Clustering
 
-This repository contains code for performing customer segmentation using the K-Means clustering algorithm. The goal is to segment customers based on their annual income and spending score.
+This project demonstrates the use of K-Means clustering to segment customers based on their annual income and spending score.
+
+## Table of Contents
+- [Dataset](#dataset)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Evaluation](#model-evaluation)
+- [Visualization](#visualization)
+- [Acknowledgements](#acknowledgements)
 
 ## Dataset
+The dataset used in this project contains information about mall customers, including:
+- CustomerID
+- Gender
+- Age
+- Annual Income (k$)
+- Spending Score (1-100)
 
-The dataset used in this project is `Mall_Customers.csv`. The dataset includes the following features:
+The dataset is loaded from a CSV file named `Mall_Customers.csv`.
 
-- `CustomerID`: Unique ID for each customer.
-- `Gender`: Gender of the customer.
-- `Age`: Age of the customer.
-- `Annual Income (k$)`: Annual income of the customer in thousands of dollars.
-- `Spending Score (1-100)`: Spending score assigned to the customer (1-100).
+## Requirements
+- Python 3.6+
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
 
 ## Installation
+Clone the repository and navigate to the project directory:
 
-To run this code, you need to have the following libraries installed:
+```bash
+git clone https://github.com/your-username/customer-segmentation.git
+cd customer-segmentation
+```
 
-- `pandas`
-- `numpy`
-- `scikit-learn`
-- `matplotlib`
-
-You can install these libraries using `pip`:
+Install the required packages:
 
 ```bash
 pip install pandas numpy scikit-learn matplotlib
+```
 
+## Usage
 
-Ensure Mall_Customers.csv is in the same directory as the code.
-Run the script to load the dataset, preprocess the data, apply K-Means clustering, and visualize the results.
+### Loading the Dataset
+The dataset is loaded using pandas.
 
+### Feature Selection
+The features used for clustering are:
+- Annual Income (k$)
+- Spending Score (1-100)
+
+### Data Preprocessing
+The data is scaled using StandardScaler from scikit-learn.
+
+### Clustering
+The K-Means algorithm is used to segment customers into 5 clusters.
+
+### Running the Code
+Execute the code to perform clustering and visualize the results:
+
+```python
+python cluster.py
+```
+
+## Model Evaluation
+The clustering labels are assigned to the dataset, and the results are visualized using a scatter plot.
+
+## Visualization
+A scatter plot is created to visualize the customer clusters and centroids.
+
+## Acknowledgements
+- The dataset source for mall customer data.
+- The scikit-learn and pandas teams for their amazing libraries.
